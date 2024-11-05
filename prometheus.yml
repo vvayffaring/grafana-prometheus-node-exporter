@@ -26,17 +26,17 @@ scrape_configs:
     # scheme defaults to 'http'.
 
     static_configs:
-    - targets: ["localhost:9090", "localhost:9200"]
-
+      - targets: ["localhost:9090", "localhost:9200"]
 
   - job_name: "node_exporter"
     static_configs:
-    - targets: [server-ip1:9200]
-      labels:
-        label: "<label_1>"
-    - targets: [server-ip2:9200]
-      labels:
-        label: "<label_2>"
-    - targets: [server-ip3:9200]
-      labels:
-        label: "<label_3>"
+      - targets: [ip-server1:9200]
+        labels:
+          label: "<label_1>"
+      - targets: [ip-server2:9200]
+        labels:
+          label: "<label_2>"
+      - targets: [ip-server3:9200]
+        labels:
+          label: "<label_3>"
+
